@@ -1,0 +1,46 @@
+{
+    "missions": [
+        {
+            "difficulty_level": 1,
+            "description": "Help Professor Birch clear the tall grass from some annoying Zigzagoon.",
+            "xp_reward": 20,
+            "success_rate": 0.95,
+            "item_reward_name": "Oran Berry"
+        },
+        {
+            "difficulty_level": 1,
+            "description": "Deliver a mysterious package to the PokeMart in Oldale Town.",
+            "xp_reward": 15,
+            "success_rate": 1.0,
+            "item_reward_name": null
+        },
+        {
+            "difficulty_level": 2,
+            "description": "Navigate through Petalburg Woods and avoid the Bug Catchers.",
+            "xp_reward": 45,
+            "success_rate": 0.85,
+            "item_reward_name": "Ether Soda"
+        },
+        {
+            "difficulty_level": 3,
+            "description": "Challenge the Rustboro Gym Leader's apprentices for a training session.",
+            "xp_reward": 100,
+            "success_rate": 0.70,
+            "item_reward_name": "Rare Candy"
+        },
+        {
+            "difficulty_level": 5,
+            "description": "Investigate a suspicious cave opening in Granite Cave. Watch out for Zubats!",
+            "xp_reward": 250,
+            "success_rate": 0.60,
+            "item_reward_name": "Focus Band"
+        },
+        {
+            "difficulty_level": 10,
+            "description": "Infiltrate the secret Team Aqua hideout near Lilycove City.",
+            "xp_reward": 1000,
+            "success_rate": 0.45,
+            "item_reward_name": "Max Revive"
+        }
+    ]
+}

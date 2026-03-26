@@ -4,7 +4,11 @@ import sys
 
 class MenuManager:
     def __init__(self):
-        self.current_options = {1: "View Stats", 2: "Take the next task", 3: "Exit"}
+        self.current_options = {
+            1: "View Player Info",
+            2: "Take the next task",
+            3: "Exit",
+        }
         self.system_message = ""
 
     def show_menu(self):
@@ -16,7 +20,7 @@ class MenuManager:
     def action(self, player, option):
         actions = {
             "1": self.view_stats,
-            "2": self.take_next_task,
+            "2": self.take_a_task,
             "3": self.exit,
         }
         func = actions.get(option, self.exit)
@@ -25,7 +29,7 @@ class MenuManager:
     def view_stats(self, player: Player):
         player.show_stats()
 
-    def take_next_task(self, player: Player):
+    def take_a_task(self, player: Player):
         print("NEXT TASK:")
 
     def exit(self, player: Player):

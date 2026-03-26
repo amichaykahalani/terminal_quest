@@ -1,6 +1,8 @@
 from .player import Player
 from .utils.menu_handler import MenuManager
+from .item import Item
 import threading
+import time
 
 
 class GameEngine:
@@ -31,6 +33,21 @@ class GameEngine:
 
         self.start_menu_listener()
         self.get_girlfriend_some_food()
+
+        print(
+            """
+        some people see the situation and feel uncomfortable..
+        """
+        )
+        self.get_money(500)
+        time.sleep(1)
+        print(
+            f"""
+        {self.player.name} buy {self.player.girlfriend.name} a cookie!
+        {self.player.girlfriend.name}: Yum Yum Yum! I liked it!
+        """
+        )
+        self.first_kiss()
 
     def welcome_message(self):
         WELCOME_MESSAGE = """
@@ -97,3 +114,26 @@ class GameEngine:
                 buying_food_for_girlfriend = input()
 
         self.is_doing_task = False
+
+    def get_money(self, amount_of_money: int):
+        self.player.money += amount_of_money
+        print(
+            f"""
+        {self.player.name} got {amount_of_money} dollar!
+        """
+        )
+
+    def first_kiss(self):
+        print(
+            f"""
+        {self.player.name} got his first kiss!
+        """
+        )
+        time.sleep(1)
+        print(
+            f"""
+        And some cupon for food from a stranger.
+        {self.player.name} put the cupon in his bag.  
+        """
+        )
+        Item.add_item(self.player, "cupon")
