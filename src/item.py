@@ -4,7 +4,7 @@ import json
 
 class Item:
 
-    def __init__(self, item_name, item_type, effect_value, quantity):
+    def __init__(self, item_name, item_type, effect_value=None, quantity=None):
         self.item_name = item_name
         self.item_type = item_type
         self.effect_value = effect_value
@@ -18,7 +18,19 @@ class Item:
             items = json.load(items_json)
             for item in items["items"]:
                 if item["item_name"] == item_name:
-                    player.inventory.append(item_name)
+                    added_item = Item(item_name, item["item_type"])
+                    player.inventory.append(added_item)
+
+    def show_item_info(self):
+        print(
+            f"""
+    Name: {self.item_name}
+    Type: {self.item_type}
+    """
+        )
 
     def use_item(self):
         pass
+
+    def __str__(self):
+        return f"{self.item_name}"

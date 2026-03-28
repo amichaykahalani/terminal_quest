@@ -16,10 +16,29 @@ class Player:
     def show_stats(self):
         print(
             f"""{self.name} Stats:
-        XP: {self.xp}
-        Level: {self.level}
-        HP: {self.hp}
-        Money: {self.money}$
-        Inventory: {self.inventory}
-        Has a girlfriend: {self.has_a_girlfriend}"""
+    #----------------
+    XP: {self.xp}
+    Level: {self.level}
+    HP: {self.hp}
+    Money: {self.money}$
+    Has a girlfriend: {self.has_a_girlfriend}
+    #----------------
+    Inventory: [""",
+            end="",
         )
+        self.print_inventory()
+
+    def print_inventory(self):
+        for item in self.inventory:
+            print(item, end=" ")
+        print("]")
+
+    def show_item_info(self, item_name):
+        for item in self.inventory:
+            if item.item_name.lower() == item_name:
+                item.show_item_info()
+
+    def use_item(self, item_name):
+        for item in self.inventory:
+            if item.item_name.lower() == item_name:
+                self.inventory.remove(item)
