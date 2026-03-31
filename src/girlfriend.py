@@ -1,3 +1,6 @@
-class GirlFriend:
+from .entity import Entity
+
+
+class GirlFriend(Entity):
     def __init__(self, name=""):
-        self.name = name
+        super().__init__(name)

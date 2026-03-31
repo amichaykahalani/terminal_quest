@@ -1,6 +1,7 @@
 from .player import Player
 from .utils.menu_handler import MenuManager
 from .item import Item
+from .mission import Mission
 import threading
 import time
 
@@ -8,7 +9,7 @@ import time
 class GameEngine:
 
     def __init__(self):
-        self.player = Player()
+        self.player = Player("Unknown")
         self.is_doing_task = True
 
     def run(self):
@@ -45,6 +46,7 @@ class GameEngine:
         )
         time.sleep(2)
         self.first_kiss()
+        Mission.add_missions(self.player)
 
     def welcome_message(self):
         WELCOME_MESSAGE = """
@@ -82,6 +84,7 @@ class GameEngine:
                     menu.show_game_menu()
                     chosen_option = input("Enter option: ")
                     menu.action(self.player, chosen_option)
+                    print()
 
     def get_girlfriend_some_food(self):
         self.is_doing_task = True

@@ -2,42 +2,51 @@
     "items": [
         {
             "item_name": "cupon",
-            "item_type": "Healing"
+            "item_type": "Healing",
+            "effect_value": 5,
+            "price": 50
         },
         {
             "item_name": "Oran Berry",
             "item_type": "Healing",
-            "effect_value": 10
+            "effect_value": 10,
+            "price": 100
         },
         {
             "item_name": "Sitrus Juice",
             "item_type": "Healing",
-            "effect_value": 30
+            "effect_value": 30,
+            "price": 250
         },
         {
             "item_name": "Rare Candy",
             "item_type": "Experience",
-            "effect_value": 50
+            "effect_value": 50,
+            "price": 1000
         },
         {
             "item_name": "Focus Band",
             "item_type": "Defense",
-            "effect_value": 15
+            "effect_value": 15,
+            "price": 450
         },
         {
             "item_name": "Quick Claw",
             "item_type": "Agility",
-            "effect_value": 20
+            "effect_value": 20,
+            "price": 500
         },
         {
             "item_name": "Ether Soda",
             "item_type": "Stamina",
-            "effect_value": 25
+            "effect_value": 25,
+            "price": 300
         },
         {
             "item_name": "Max Revive",
             "item_type": "Healing",
-            "effect_value": 100
+            "effect_value": 100,
+            "price": 1500
         }
     ]
 }
